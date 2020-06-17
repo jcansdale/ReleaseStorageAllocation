@@ -7,7 +7,7 @@ GITHUB_TOKEN=<PAT>      # PAT with repo, read:packages, write:packages and delet
 REPOSITORY=<OWNER/REPO> # Repository with associated storage
 FREE_GB=<NUMBER>        # Number of GB to free
 
-function release-storage-allocation { bash <(curl -Lks https://raw.githubusercontent.com/jcansdale/ReleaseStorageAllocation/master/free.sh) "$@"; }
+function free { bash <(curl -Lks https://raw.githubusercontent.com/jcansdale/ReleaseStorageAllocation/master/free.sh) "$@"; }
 
-release-storage-allocation $REPOSITORY $FREE_GB $GITHUB_TOKEN
+free $REPOSITORY $FREE_GB $GITHUB_TOKEN
 ```
