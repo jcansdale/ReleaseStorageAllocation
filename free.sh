@@ -1,4 +1,4 @@
-REPOSITORY=$1
+REPOSITORY=$(echo $1 | tr '[:upper:]' '[:lower:]')
 FREE_GB=$2
 GITHUB_TOKEN=$3
 REGISTRY=docker.pkg.github.com
